@@ -1,0 +1,17 @@
+import React, { useState } from "react";
+import Header from "./components/Header";
+import { Outlet } from "react-router-dom";
+import ThemeContext from "./context/ThemeContext";
+
+const App = () => {
+  return (
+    <>
+      <ThemeContext>
+        <Header />
+        <Outlet />
+      </ThemeContext>
+    </>
+  );
+};
+
+export default App;
